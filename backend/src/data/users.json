@@ -1,0 +1,132 @@
+{
+  "0xA33F9bd9658ADCfe53460ad0CCcF2b76719b331F": {
+    "email": "admin@chainofcustody.local",
+    "username": "admin",
+    "passwordHash": "$2a$10$7JKd1EjXLrdfUkbOIPtsjejGf6ePcyC7fROF0yTVN/04AKcDflKca",
+    "role": "SuperAdmin",
+    "stationId": "",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-02T09:46:07.361Z"
+  },
+  "0x1B8d7F0168f26FA96B088b49d4F5997Ed2fCA848": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "LuwingaPoliceAdmin",
+    "passwordHash": "$2a$10$UZU9hw2VhC0g9UNm0REOtujtV343.sRG5yGWiwqddhfKcqJdytZGW",
+    "role": "StationAdmin",
+    "stationId": "ST-1782986272414",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-02T09:59:45.160Z"
+  },
+  "0x9DD3bB61FB9A444DDbD51b2172da08f6837798b8": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "SondaPoliceAdmin",
+    "passwordHash": "$2a$10$YB9GvQIr3SZt6uIuQPoB.uFHl.WU3cdwucdhyElE3YTZ08hLMY.hS",
+    "role": "StationAdmin",
+    "stationId": "ST-1782986295017",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-02T10:00:50.310Z"
+  },
+  "0xE0E516B7a1F9793d15FfC264a127d4019e12D1D5": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "LuwingaOfficer1",
+    "passwordHash": "$2a$10$bHlEDTPuab2ekLSe2LUdJujltjor69nJszLP1FDtKglYNlPvr8.52",
+    "role": "Officer",
+    "stationId": "ST-1782986295017",
+    "isActive": true,
+    "mustChangePassword": true,
+    "createdAt": "2026-07-02T10:07:29.410Z"
+  },
+  "0x4Ac00Ab96576EC80d68F4517CD15809aa883DBb9": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "LuwingaAnalyst1",
+    "passwordHash": "$2a$10$L9TmNiGEJPyETWHFF9W0k.EHZQodv3IEgS.CbsL.qMPn9Jxcb7oAy",
+    "role": "Analyst",
+    "stationId": "ST-1782986295017",
+    "isActive": true,
+    "mustChangePassword": true,
+    "createdAt": "2026-07-02T10:08:08.272Z"
+  },
+  "0x12f16e93eB2869d6278D1Cd855fAB1C5fb1C0a5A": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "LuwingaProsecutor1",
+    "passwordHash": "$2a$10$TQ4GnOHB38g56U3x.kR9t.8caN/VBCdDw8BxfmqRpRZa0HdUqsJAm",
+    "role": "Prosecutor",
+    "stationId": "ST-1782986295017",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-02T10:08:45.732Z"
+  },
+  "0x4683f09d31CF931CdbfFFD466EC82363b52EBDAB": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "SondaOfficer1",
+    "passwordHash": "$2a$10$wgIpiET8OdxHQoMyqxGh9O7vjmnlsctyN9W0nx8DcOiBRNwe.um/O",
+    "role": "Officer",
+    "stationId": "ST-1782986295017",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-02T10:19:02.758Z"
+  },
+  "0x53Ce2bf6651d78AC5E143732866B3F992AC24879": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "Analyst1",
+    "passwordHash": "$2a$10$uSG6DRvLFW8ImiRDR3G7q.vqRldfZY68VhYd4YyTQEiLdVjQ6bmku",
+    "role": "Analyst",
+    "stationId": "ST-1782986295017",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-02T11:01:38.254Z"
+  },
+  "0x1d7F5f2a4b1EF0D3D172336d0061605fA61747DE": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "Analyst2",
+    "passwordHash": "$2a$10$oAcJZQm9fgTEyZO5.na6BuOs4aju9UOrVZJg1vTWFWAil2szZ30rG",
+    "role": "Analyst",
+    "stationId": "ST-1782986295017",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-02T11:04:39.666Z"
+  },
+  "0x189c56D7c14f30eF2dbB6Dee5E29F1DEB6C9107E": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "SondaProsecutor",
+    "passwordHash": "$2a$10$Uur/AOVQsW5NG69Gc.vXj.f.hFvwE7jTESP/5F7GAP8fwM6J3fZp6",
+    "role": "Prosecutor",
+    "stationId": "ST-1782986295017",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-02T11:37:33.900Z"
+  },
+  "0x535e61C6dbFD24C2892a833932C223a1E466A6cB": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "LubingaPolice",
+    "passwordHash": "$2a$10$EV85VX9qaDJ/mfmPl4jwLOmOd6v.O5CqhmQHxmVYecsAX1h2DFakG",
+    "role": "Officer",
+    "stationId": "ST-1782986272414",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-02T11:49:47.787Z"
+  },
+  "0x3F953DBb9A7c97c60f6EDd6ec86F860878267579": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "Analyst_Phiri",
+    "passwordHash": "$2a$10$9WZp2r4vNBVqxajZXo..LO5LS1pbndHUDad5H5OImrgPk30cVrmVu",
+    "role": "Analyst",
+    "stationId": "ST-1782986272414",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-02T12:37:03.730Z"
+  },
+  "0x7f2D4CAf323dE6DcD196b33be60793900b4708c6": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "Offcer_Banda_Prosecutor",
+    "passwordHash": "$2a$10$pVh8iWwG/2inWR46dkrGh.D79JaR9l5Bn0j0LkmsP4KITqe0sUuGW",
+    "role": "Prosecutor",
+    "stationId": "ST-1782986272414",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-02T12:44:18.603Z"
+  }
+}
