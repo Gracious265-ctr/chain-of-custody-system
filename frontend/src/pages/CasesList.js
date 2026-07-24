@@ -175,7 +175,7 @@ const CasesList = () => {
           subtitle={`${isAdmin ? 'Admin Oversight' : isProsecutor ? 'Cases Assigned to You' : isAnalyst ? 'Cases Assigned to You' : 'Your Created Cases'} (${totalItems} total)`}
           icon={faFolder}
           actions={
-            <div style={{ display: 'flex', gap: '10px' }}>
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               {isOfficer && (
                 <button 
                   onClick={() => navigate('/create-case')} 
@@ -238,7 +238,7 @@ const CasesList = () => {
         </div>
 
         {/* Card Grid Layout */}
-        <div className="dashboard-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))' }}>
+        <div className="dashboard-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))' }}>
           {paginatedCases.length === 0 ? (
             <div className="no-cases" style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '60px 20px', color: '#718096' }}>
               <div style={{ fontSize: '48px', marginBottom: '16px' }}>📂</div>
@@ -260,10 +260,10 @@ const CasesList = () => {
                 {/* Top Row: Case Number & Status */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                   <div>
-                    <div style={{ fontWeight: '700', fontSize: '18px', color: '#0f3460' }}>
+                    <div style={{ fontWeight: '700', fontSize: '18px', color: '#2d3748' }}>
                       {item.case_number || 'N/A'}
                     </div>
-                    <div style={{ fontWeight: '600', fontSize: '16px', color: '#2d3748', marginTop: '2px' }}>
+                    <div style={{ fontWeight: '600', fontSize: '16px', color: '#4a5568', marginTop: '2px' }}>
                       {item.title || 'Untitled'}
                     </div>
                   </div>
@@ -312,7 +312,7 @@ const CasesList = () => {
                   </div>
                 </div>
 
-                {/* Description */}
+                {/* Description with View More */}
                 {item.description && (
                   <div style={{ 
                     fontSize: '14px', 
@@ -322,17 +322,32 @@ const CasesList = () => {
                     marginTop: '4px' 
                   }}>
                     <FontAwesomeIcon icon={faFileAlt} style={{ marginRight: '8px', color: '#4a6fa5' }} />
-                    {item.description.length > 80 ? item.description.substring(0, 80) + '...' : item.description}
+                    <span className="description-text">
+                      {item.description && item.description.length > 80 ? (
+                        <>
+                          {item.description.substring(0, 80)}...
+                          <button 
+                            className="more-btn"
+                            onClick={() => {
+                              // Use window.alert for simplicity to show full text
+                              window.alert(item.description);
+                            }}
+                          >
+                            View More
+                          </button>
+                        </>
+                      ) : (
+                        item.description || 'No description provided'
+                      )}
+                    </span>
                   </div>
                 )}
 
                 {/* Action Buttons */}
-                <div style={{ marginTop: '8px', borderTop: '1px solid #edf2f7', paddingTop: '14px', display: 'flex', justifyContent: 'flex-end', gap: '10px', flexWrap: 'wrap' }}>
-                  
+                <div className="card-actions">
                   <button
                     onClick={() => navigate(`/evidence?caseId=${item.case_id || item.id}`)}
                     className="btn-primary"
-                    style={{ padding: '8px 16px', fontSize: '13px' }}
                   >
                     <FontAwesomeIcon icon={faEye} style={{ marginRight: '6px' }} />
                     View Evidence
@@ -341,7 +356,6 @@ const CasesList = () => {
                   <button
                     onClick={() => navigate(`/supporting-evidence?caseId=${item.case_id || item.id}`)}
                     className="btn-success"
-                    style={{ padding: '8px 16px', fontSize: '13px' }}
                   >
                     <FontAwesomeIcon icon={faFileAlt} style={{ marginRight: '6px' }} />
                     Supporting Files
@@ -352,7 +366,6 @@ const CasesList = () => {
                     <button
                       onClick={() => navigate(`/close-case/${item.case_id}`)}
                       className="btn-danger"
-                      style={{ padding: '8px 16px', fontSize: '13px' }}
                     >
                       <FontAwesomeIcon icon={faLock} style={{ marginRight: '6px' }} />
                       Close with Report
@@ -363,7 +376,6 @@ const CasesList = () => {
                     <button
                       onClick={() => handleToggleStatus(item)}
                       className={item.is_closed ? 'btn-success' : 'btn-danger'}
-                      style={{ padding: '8px 16px', fontSize: '13px' }}
                     >
                       {item.is_closed ? 'Reopen Case' : 'Close Case'}
                     </button>
@@ -438,3 +450,4 @@ const CasesList = () => {
 };
 
 export default CasesList;
+

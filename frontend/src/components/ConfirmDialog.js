@@ -315,3 +315,4 @@ ConfirmDialog.defaultProps = {
 };
 
 export default ConfirmDialog;
+

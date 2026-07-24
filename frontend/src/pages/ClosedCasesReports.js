@@ -211,3 +211,4 @@ const ClosedCasesReports = () => {
 };
 
 export default ClosedCasesReports;
+

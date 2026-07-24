@@ -81,16 +81,14 @@ const Sidebar = () => {
       ]
     },
     superAdmin: {
-      label: 'Super Admin',
+      label: 'Administration',
       icon: faUserShield,
       items: [
         { path: '/stations', label: 'Stations', icon: faBuilding, description: 'Manage police stations' },
         { path: '/add-station', label: 'Add Station', icon: faPlusCircle, description: 'Create new station' },
         { path: '/users', label: 'Users', icon: faUsers, description: 'Manage system users' },
-        { path: '/add-user', label: 'Add User', icon: faUserPlus, description: 'Create new user' },
-        { path: '/audit-logs', label: 'Audit Logs', icon: faHistory, description: 'Blockchain audit trail' },
-        { path: '/assign-case', label: 'Assign Case', icon: faClipboardList, description: 'Assign cases to prosecutors' },
-        { path: '/assign-analyst', label: 'Assign Analyst', icon: faMicroscope, description: 'Assign analysts to cases' }
+        { path: '/add-user', label: 'Add User', icon: faUserPlus, description: 'Create new user' }
+        // Removed: Audit Logs, Assign Case, Assign Analyst
       ]
     },
     stationAdmin: {
@@ -195,12 +193,19 @@ const Sidebar = () => {
   const getAvailableSections = () => {
     const sections = {};
     
-    sections.general = menuItems.general;
+    // SuperAdmin gets ONLY the Administration section - no General section
+    if (isSuperAdmin) {
+      sections.superAdmin = menuItems.superAdmin;
+    }
     
-    if (isSuperAdmin) sections.superAdmin = menuItems.superAdmin;
-    if (isStationAdmin) sections.stationAdmin = menuItems.stationAdmin;
-    if (isOfficer) sections.officer = menuItems.officer;
-    if (isAnalyst) sections.analyst = menuItems.analyst;
+    // All other roles get the General section plus their role-specific sections
+    if (!isSuperAdmin) {
+      sections.general = menuItems.general;
+      
+      if (isStationAdmin) sections.stationAdmin = menuItems.stationAdmin;
+      if (isOfficer) sections.officer = menuItems.officer;
+      if (isAnalyst) sections.analyst = menuItems.analyst;
+    }
     
     return sections;
   };
@@ -241,7 +246,7 @@ const Sidebar = () => {
               animate={{ opacity: 1, width: 'auto' }}
               exit={{ opacity: 0, width: 0 }}
             >
-              <span className="brand-title">Criminal Evidence Chain of Custody</span>
+              <span className="brand-title">Criminal Evidence Chain Of Custody Management using Blockchain</span>
               <span className="brand-subtitle">Blockchain Evidence Management System</span>
             </motion.div>
           ) : (
@@ -250,7 +255,7 @@ const Sidebar = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              title="Criminal Evidence Chain of Custody Management System"
+              title="Criminal Evidence Chain Of Custody Management using Blockchain"
             >
               <span className="brand-title-short">Chain of Custody</span>
             </motion.div>

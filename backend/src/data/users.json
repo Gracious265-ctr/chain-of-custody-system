@@ -1,0 +1,52 @@
+{
+  "0xB06F1EA2470f56C2ca38EcbA4e82ED081f6E9f85": {
+    "email": "admin@chainofcustody.local",
+    "username": "admin",
+    "passwordHash": "$2a$10$0zN4gvloiOaUzVXAgQ2Z3ePLfxs8.bwr/o0/kXoEOPIkAZhYAMMf6",
+    "role": "SuperAdmin",
+    "stationId": "",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-09T06:32:23.086Z"
+  },
+  "0x70d34014994193099c0df820D7A34F787fDb5Df2": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "LuwingaPoliceAdmin",
+    "passwordHash": "$2a$10$1pEwrP2fpU1lIj17Q2AvUOg/o5j9FX0gD6bOYCeCprIT145M2KZ5O",
+    "role": "StationAdmin",
+    "stationId": "ST-1783578887959",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-09T06:35:02.917Z"
+  },
+  "0x8AdD8a5DEA75fE2F4236C9C388dD6bb1d91C1E76": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "LO",
+    "passwordHash": "$2a$10$T13Lu15MhO02hSOa7XDgGuJcTYBfSfHSFrdqydReppVsxRxayQl0O",
+    "role": "Officer",
+    "stationId": "ST-1783578887959",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-09T06:38:22.677Z"
+  },
+  "0x502e3D4174aBb77d530E2F9b90D816D7b86d7435": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "LA",
+    "passwordHash": "$2a$10$y51q7e.vfRhzrRaN4JwEN.rxdAaHK8co5lxIz337j.NgIlyjIVJWi",
+    "role": "Analyst",
+    "stationId": "ST-1783578887959",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-09T08:22:07.167Z"
+  },
+  "0xE9Bf640A5675f4128bEBF1028409d7AB91723520": {
+    "email": "mpatagracias67@gmail.com",
+    "username": "Luwinga Prosecutor",
+    "passwordHash": "$2a$10$glQO87iv8sF1blcLT/uXx.20tzM8NOKgYl2pUTMJ/NJsSWU1V3nyS",
+    "role": "Prosecutor",
+    "stationId": "ST-1783578887959",
+    "isActive": true,
+    "mustChangePassword": false,
+    "createdAt": "2026-07-09T08:32:57.481Z"
+  }
+}

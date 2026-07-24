@@ -270,7 +270,7 @@ const SupportingEvidenceList = () => {
         </div>
 
         {/* Card Grid Layout */}
-        <div className="dashboard-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))' }}>
+        <div className="dashboard-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))' }}>
           {paginatedEvidence.length === 0 ? (
             <div className="no-evidence" style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '60px 20px', color: '#718096' }}>
               <div style={{ fontSize: '48px', marginBottom: '16px' }}>📁</div>
@@ -295,7 +295,7 @@ const SupportingEvidenceList = () => {
                 {/* Top Row: File Name */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                   <div>
-                    <div style={{ fontWeight: '700', fontSize: '18px', color: '#0f3460' }}>
+                    <div style={{ fontWeight: '700', fontSize: '18px', color: '#2d3748' }}>
                       {item.file_name || 'Unknown'}
                     </div>
                     <div style={{ fontSize: '12px', color: '#718096', fontFamily: 'monospace' }}>
@@ -304,20 +304,38 @@ const SupportingEvidenceList = () => {
                   </div>
                 </div>
 
-                {/* Description Section */}
+                {/* Description Section with View More */}
                 {item.description && (
                   <div style={{ 
-                    background: '#f7fafc', 
+                    background: '#f8fafc', 
                     padding: '12px', 
                     borderRadius: '6px',
-                    borderLeft: '3px solid #0f3460',
+                    borderLeft: '3px solid #4a6fa5',
                     marginBottom: '4px'
                   }}>
                     <div style={{ fontSize: '13px', fontWeight: '600', color: '#4a5568' }}>
                       <FontAwesomeIcon icon={faFileAlt} style={{ marginRight: '8px' }} />
                       Description:
                     </div>
-                    <div style={{ fontSize: '14px', color: '#2d3748', marginTop: '4px' }}>{item.description}</div>
+                    <div style={{ fontSize: '14px', color: '#2d3748', marginTop: '4px' }}>
+                      <span className="description-text">
+                        {item.description && item.description.length > 80 ? (
+                          <>
+                            {item.description.substring(0, 80)}...
+                            <button 
+                              className="more-btn"
+                              onClick={() => {
+                                window.alert(item.description);
+                              }}
+                            >
+                              View More
+                            </button>
+                          </>
+                        ) : (
+                          item.description
+                        )}
+                      </span>
+                    </div>
                   </div>
                 )}
 
@@ -358,13 +376,11 @@ const SupportingEvidenceList = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div style={{ marginTop: '8px', borderTop: '1px solid #edf2f7', paddingTop: '14px', display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
-                  
+                <div className="card-actions">
                   {/* View Button */}
                   <button
                     onClick={() => handleViewFile(item.supporting_id, item.file_name)}
                     className="btn-primary"
-                    style={{ padding: '6px 16px', fontSize: '13px', background: '#3182ce' }}
                   >
                     <FontAwesomeIcon icon={faEye} style={{ marginRight: '6px' }} />
                     View
@@ -374,7 +390,6 @@ const SupportingEvidenceList = () => {
                   <button
                     onClick={() => handleDownloadFile(item.supporting_id, item.file_name)}
                     className="btn-success"
-                    style={{ padding: '6px 16px', fontSize: '13px' }}
                   >
                     <FontAwesomeIcon icon={faDownload} style={{ marginRight: '6px' }} />
                     Download
@@ -434,3 +449,4 @@ const SupportingEvidenceList = () => {
 };
 
 export default SupportingEvidenceList;
+

@@ -14,8 +14,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faFile, faFolder, faBuilding, faBalanceScale, 
   faCheckCircle, faExclamationTriangle, faClock,
-  faChartBar, faFileAlt, faGavel
+  faChartBar, faFileAlt, faGavel, faShieldAlt,
+  faLock, faLink, faUser
 } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 import axios from 'axios';
 import '../App.css';
 
@@ -356,6 +358,80 @@ const Dashboard = () => {
     <div className="app-layout">
       <Sidebar />
       <div className="main-content">
+        {/* System Name Banner */}
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          style={{
+            background: 'linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%)',
+            padding: '20px 28px',
+            borderRadius: '12px',
+            marginBottom: '24px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '16px',
+            boxShadow: '0 4px 20px rgba(15, 52, 96, 0.3)',
+            border: '1px solid rgba(255, 255, 255, 0.1)'
+          }}
+        >
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.1)',
+            borderRadius: '50%',
+            width: '48px',
+            height: '48px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexShrink: 0
+          }}>
+            <FontAwesomeIcon icon={faLink} style={{ fontSize: '24px', color: 'white' }} />
+          </div>
+          <div>
+            <h1 style={{ 
+              color: 'white', 
+              margin: 0, 
+              fontSize: '20px', 
+              fontWeight: '700',
+              letterSpacing: '0.5px'
+            }}>
+              Criminal Evidence Chain Of Custody Management using Blockchain
+            </h1>
+            <p style={{ 
+              color: 'rgba(255, 255, 255, 0.7)', 
+              margin: '4px 0 0 0', 
+              fontSize: '14px'
+            }}>
+              <FontAwesomeIcon icon={faShieldAlt} style={{ marginRight: '8px' }} />
+              Blockchain Evidence Management System
+            </p>
+          </div>
+          <div style={{ marginLeft: 'auto', display: 'flex', gap: '12px' }}>
+            <span style={{
+              padding: '6px 12px',
+              background: 'rgba(72, 187, 120, 0.2)',
+              borderRadius: '20px',
+              color: '#48bb78',
+              fontSize: '12px',
+              fontWeight: '600'
+            }}>
+              <FontAwesomeIcon icon={faLock} style={{ marginRight: '4px' }} />
+              Blockchain Secured
+            </span>
+            <span style={{
+              padding: '6px 12px',
+              background: 'rgba(255, 255, 255, 0.1)',
+              borderRadius: '20px',
+              color: 'rgba(255, 255, 255, 0.8)',
+              fontSize: '12px',
+              fontWeight: '600'
+            }}>
+              <FontAwesomeIcon icon={faUser} style={{ marginRight: '4px' }} />
+              {user?.role}
+            </span>
+          </div>
+        </motion.div>
+
         <PageHeader
           title="Dashboard"
           subtitle={`Welcome back, ${user?.username} (${user?.role})`}
@@ -463,3 +539,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+

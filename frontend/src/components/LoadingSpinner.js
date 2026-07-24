@@ -40,3 +40,4 @@ const LoadingSpinner = ({ size = 'medium', message = 'Loading...', fullPage = fa
 };
 
 export default LoadingSpinner;
+

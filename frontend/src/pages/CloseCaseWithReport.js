@@ -386,3 +386,4 @@ const CloseCaseWithReport = () => {
 };
 
 export default CloseCaseWithReport;
+

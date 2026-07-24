@@ -24,3 +24,4 @@ module.exports = async function (deployer) {
   const evidenceInstance = await EvidenceChainEvidence.deployed();
   console.log(`✅ Evidence contract deployed at: ${evidenceInstance.address}`);
 };
+
